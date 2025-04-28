@@ -21,9 +21,8 @@ GREY = (100, 100, 100)
 TYPES = ["mage", "archer", "guerrier"]
 
 # Chargement des images
-#fond_image = pygame.image.load("images/fond.png")
 misc_image = {
-    #"fond": pygame.image.load("images/fond.png"),
+    "fond": pygame.image.load("images/background.png"),
     "epee": pygame.image.load("images/Epee.png"),
     "bouclier": pygame.image.load("images/Defence.png"),
     "coeur": pygame.image.load("images/Coeur.png"),
@@ -326,7 +325,7 @@ nombre_etages = 1
 # Boucle principale mise à jour
 running = True
 while running:
-    screen.fill(WHITE)
+    screen.blit(misc_image["fond"], (0, 0))
 
     # Gestion des événements
     for event in pygame.event.get():
